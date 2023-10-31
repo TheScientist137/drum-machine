@@ -44,6 +44,7 @@ function DrumMachine () {
             <div
               className='drum-pad btn btn-light w-100 h-75 text-center fs-1 d-flex align-items-center justify-content-center'
               onClick={() => playSound(sound.keyTrigger)}
+              id={sound.sound}
             >
               <p>{sound.keyTrigger}</p>
               <audio
