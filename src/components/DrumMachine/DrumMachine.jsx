@@ -33,17 +33,19 @@ function DrumMachine () {
   }, [])
 
   return (
-    <div id='drum-machine' className='container text-center'>
+    <div id='drum-machine' className='container text-center vh-100'>
       <h1>Drum Machine</h1>
-      <div id='display' className='mt-4'>{displayText}</div>
-      <div className='row mt-4'>
+      <div id='display' className='mt-4'>
+        {displayText}
+      </div>
+      <div className='row mt-4 h-75 w-100'>
         {drumSounds.map(sound => (
-          <div className='col-4'  key={sound.keyTrigger}>
+          <div className='col-4 h-auto' key={sound.keyTrigger}>
             <div
-              className='drum-pad btn btn-primary'
+              className='drum-pad btn btn-light w-100 h-75 text-center fs-1 d-flex align-items-center justify-content-center'
               onClick={() => playSound(sound.keyTrigger)}
             >
-              {sound.keyTrigger}
+              <p>{sound.keyTrigger}</p>
               <audio
                 id={sound.keyTrigger}
                 className='clip'
